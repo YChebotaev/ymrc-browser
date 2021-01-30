@@ -4,11 +4,10 @@ function clickOn(className) {
 }
 
 const port = chrome.runtime.connect("bjfkhmdfgmkocdelkdjcbciajmcaonnh", {
-  name: "channel"
+  name: "channel",
 });
 
-port.onMessage.addListener((message, port) => {
-  console.log(message);
+port.onMessage.addListener((message) => {
   const { method } = message;
   switch (method) {
     case "play":

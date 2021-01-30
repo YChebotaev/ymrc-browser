@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
   "name": "Yandex Music Remote Control (YMRC)",
-  "version": "1.0.0",
+  "version": "3",
   "description": "A remote control browser extension to control player at music.yandex.ru",
-  "permissions": ["tabs", "storage", "https://music.yandex.ru/"],
+  "permissions": ["storage", "https://music.yandex.ru/"],
   "background": {
     "persistent": true,
     "scripts": ["qrcode.js", "pusher.min.js", "background.mjs"]
@@ -18,7 +18,7 @@
     }
   ],
   "externally_connectable": {
-    "ids": "bjfkhmdfgmkocdelkdjcbciajmcaonnh",
+    "ids": ["bjfkhmdfgmkocdelkdjcbciajmcaonnh"],
     "matches": ["https://music.yandex.ru/*"],
     "accepts_tls_channel_id": false
   },
